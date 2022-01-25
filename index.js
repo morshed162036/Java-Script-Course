@@ -154,6 +154,162 @@
 //  a = a-b;
 // console.log( a);
 // console.log( b);
-//part-12: Interview Question-3 : diff between == vs === ?
-//(==) is check only values
-//(===) is check value and datatype
+//part-12: Interview Question-3 : diff between = vs == vs === ?
+//(=) is for asing value in variable.
+//(==) is check only values.
+//(===) is check value and datatype.
+
+//**********************************************
+//**********************************************
+//***************Control Statement & Loops******
+//********************************************** 
+//**********************************************
+
+//part-13: control Statement & Loops
+
+//part-13.1: If , Else.
+
+    var rain = "raining";
+
+    if(rain=="raining")
+    {
+        //console.log("raining");
+    }else{
+        //console.log("not raining");
+    }
+
+    var area = "square";
+    var PI = 3.142, l = 5, b = 4, r = 3;
+
+    if(area == "circle")
+    {
+        //console.log("The are of the circle is :" + PI*r**2);
+    }else if(area == "triangle")
+    {
+        //console.log("The are of the triangle is :" + (l*b)/2);
+    }else if(area == "rectangle")
+    {
+        //console.log("The are of the rectangle is :" + (l*b));
+    }else{
+        //console.log("Please Enter Valid Data");
+    }
+
+//part-13.2: chalange-6: Write a program that works out weather if a given your is a leap year or not?
+// A normal years has 365 days, leap years have 366, with an extra day in february.
+
+    var year = 2020;
+
+    if (year%4==0)
+    {
+        if(year%100 ==0)
+        {
+            if(year%400 == 0)
+            {
+                //console.log("Leap year");
+            }else{
+                //console.log("Not Leap year");
+            }
+        }else{
+            //console.log("Leap year");
+        }
+    }else{
+        //console.log("Not Leap year");
+    }
+
+//part-13.3: Interview Question-4 : What is truthy and falsy values in Javascript?
+// ans: we have total 5 falsy values in Javascript.
+//  0, "", undefined, null, NaN, False** is false anyway.
+
+    if(score = 0)// if(score = 12)
+    {
+        //console.log("we loss the game");
+    }else{
+        //console.log("yeah we won the game");
+    }
+
+//part-13.4: Conditional (ternary) oprtator is the only JavaScript operator that takes three operands.
+
+    var age = 17;
+
+    if (age>=18)
+    {
+        //console.log("you are eligible to vote");
+    }else{
+        //console.log("you are not eligible to vote");
+    }
+    // conditional 
+    //console.log((age>=18) ? "you can vote":"you can't vote");
+    statement = (age>=18) ? "you can vote":"you can't vote";
+    //console.log(statement);
+
+//part-13.5: Switch Statement.
+
+// Evaluates an expression, matching the expression's value to a case clause, and executes statements associated with that case.
+// 1st without break statement.
+// Find the area of circle, triangle and rectangle?
+
+    var area = "circle";
+    var PI = 3.142, l = 5, b = 4, r = 3;
+
+    switch(area){
+        case 'circle':
+            //console.log("The are of the circle is :" + PI*r**2);
+            break;
+        case 'triangle':
+            //console.log("The are of the triangle is :" + (l*b)/2);
+            break;
+        case 'rectangle':
+            //console.log("The are of the rectangle is :" + (l*b));
+            break;
+        default:
+            //console.log("Please Enter Valid Data");
+    }
+
+//part-13.6: While Loop.
+    var num = 0;
+    // block scope
+    while(num<=10)
+    {
+        //console.log(num);
+        num++
+    }
+
+//part-13.7: Do-While Loop.
+    
+    var num = 11;
+
+    
+    do{
+        //debugger;
+        //console.log(num);
+        num++
+    }while(num<=10)
+
+//part-13.8: For Loop.
+
+    for(var num = 0; num<=10; num++)
+    {
+        //console.log(num);
+    }
+
+//part-13.9: challenge-7: Javascript program to print table for given number(8)?
+
+    var num1 = 8;
+    for(var num = 0; num<=10; num++)
+    {
+        //console.log(num1 +" * " + num +" = "+ (num*num1));
+    }
+
+//*********************************************
+//***********Functions ************************
+//*********************************************
+
+//part-14:Function.
+    function sum()
+    {
+        var a=10,b=20,total;
+        total = a+b;
+        //console.log(total);
+        return total;
+    }
+   console.log(sum()); 
