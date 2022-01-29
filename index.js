@@ -304,12 +304,264 @@
 //***********Functions ************************
 //*********************************************
 
-//part-14:Function.
+//part-14.1:Function.
     function sum()
     {
         var a=10,b=20,total;
         total = a+b;
         //console.log(total);
-        return total;
+        
     }
-   console.log(sum()); 
+  // console.log(sum()); 
+
+//part-14.2: Paramters in function
+function sum(a,b)
+{
+    
+    var total = a+b;
+    //console.log(total);
+    
+}
+sum(20,10);
+//console.log(sum(20,10));
+
+//Interview Question
+//Why functions?
+// ANS: you can reuse code: define the code once, and use it many times.
+//you can use the same code with different arguments, to produce different results.
+
+//part-14.3: Function expressions. AND Return keyword.
+// Function expression simply means create a function and put it into the variable.
+//When javascript reaches a return statement the function will stop executing.
+    function sum(a,b)
+    {
+        
+        var total = a+b;
+        return total;
+        
+    }
+    var funexp = sum(20,10);
+    //console.log(funexp);
+    //console.log('the sum of two number is '+ funexp);
+
+//part-14.4: Anonymous Function function.
+// ASN: A function expression is similar to and has the same syntax as a function declaration One can define "named"
+//function expressions(where the name of the expression might be used in the call stack for example) or "anonymous" function expressions.
+
+    var funexp = function(a,b)
+    {
+        
+        var total = a+b;
+        return total;
+        
+    }
+    var sum = funexp(20,10);
+    var sum1 = funexp(21,10);
+    //console.log('the sum of two number is '+ sum);
+    //console.log(sum<sum1);//print true or false
+
+   // ECMAScript 2015 / ES6
+   //1)LET and CONST
+   //2) TEMPLATE STRING
+   //3) DEFAULT ARGUMENT
+   //4) DESTRUCTURING
+   //5) OBJECT PROPERTIES
+   //6) ARROW FUNCTION
+   //7) REST OPERATORS
+   //8) SPREAD Operators
+
+
+//1) LET vs CONST vs VAR
+
+//var => Function scope
+//let and const => Block Scope
+    // var myName = "Morshed Ahmed"
+    // console.log(myName);
+
+    // myName = "Shrabon"
+    // console.log(myName);
+
+    // const myName = "Morshed Ahmed"
+    // console.log(myName);
+
+    // myName = "Shrabon"
+    // console.log(myName);
+
+    function biodata(){
+        let myfirstname = "Morshed";
+        //console.log(myfirstname);
+        if(true){
+            let mylastname = "Ahmed";
+           // console.log('inner '+ myfirstname);
+           // console.log('inner '+ mylastname);
+        }
+       // console.log('innerOuter '+ mylastname);
+    }
+    biodata();
+
+// 2) Template literals (Template strings)
+// JavaScript program to print table for given number (8)?
+
+    var num1 = 8;
+    for(var num = 0; num<=10; num++)
+    {
+        //console.log(num1 +" * " + num +" = "+ (num*num1));
+        //console.log(`${num1} * ${num} = ${num*num1}`);
+    }
+
+// 3) Default Argument or Parameters
+//Default function parameters allow named perameters to be initialized with default values allow named parameters to be
+//initialized with default values if no value or undefiend is passed.
+
+    function multi(a,b=10)
+    {
+        
+        var total = a+b;
+        //console.log(total);
+        
+    }
+    multi(20);
+
+//6) Fat Arrow Function
+
+// Normal way of writing function
+
+    //console.log(multi(20));
+    function multi(a,b=10)
+    {
+        
+        var total = a+b;
+        return total;
+        
+    }
+    multi(20);
+
+// How to convert it into Fat Arrow Function
+
+    //type-1:
+    // const mult = (a,b=10) => {
+    //     var total = a+b;
+    //     return total;
+    // } 
+    // console.log(mult(20)); //console always fat arrow function bananor pore dite hobe..
+
+    //type-2:
+    // const mult = () => {
+    //     //var total = a+b;
+    //     return `${(a=10)+(b=10)}`;
+    // } 
+    // console.log(mult());
+
+    //type-3
+
+    // const mult = () => `${(a=10)+(b=10)}` 
+    // console.log(mult());
+
+
+/******************* */
+//Array In JavaScript
+/******************* */
+
+// In javascript we can store any kind of datatype in same variable.
+
+    var myFriends = ['auti',22,'male','nafise',21,'male','fahim',52,true];
+
+//part-1: Traversal in Array
+
+// navigate through an array
+
+// if we want to get the single data at a time and also
+//if we want to change the data
+
+var myFriend = ['auti','nafise','fahim','shrabon'];
+//console.log(myFriend[1]);
+//console.log(myFriend.length);
+
+// Using For loop
+    for(var i=0; i<=myFriend.length-1; i++){
+        //console.log(myFriend[i]);
+    }
+
+//Using For in loop // it print only indrex number.
+    for(let elements in myFriend){
+        //console.log(elements);
+    }
+
+//Using For of loop // it print only indrex value.
+    for(let elements of myFriend){
+        //console.log(elements);
+    }
+
+// Using forEach()
+//Calls a function for each element in the array.
+//can not use break in this function.
+    //type-1:
+    myFriend.forEach(function(element, index, array){
+        //console.log(`index-${index} => element-${element} => ${array}`);
+    });
+    //type-2: fat arrow. // one prb in Fat Arrow function..it can't Support this method.
+    myFriend.forEach((element, index, array) => {
+        //console.log(`index-${index} => element-${element} => ${array}`);
+    })
+
+// part-2: Searching and filter in an Array. All function pass 4 argument(current value, element, index, array).
+// part-2.1:Arroy.prototype.indexOf()
+
+//Return the first (least) index of an element within the array equal
+//to an element, or -1 if none is found. It search the element from the 0th index number.
+
+    //console.log(myFriend.indexOf('nafise'));// return elements index number
+    //console.log(myFriend.indexOf('nafise',3));// start to find nafise after index 3. if not found then return -1.
+
+//part-2.2: Arroy.prototype.lastindexOf()
+
+//Return the last (least) index of an element within the array equal
+//to an element, or -1 if none is found. It search the element from the last index number.
+    //console.log(myFriend.lastndexOf('nafise'));
+    //console.log(myFriend.lastndexOf('nafise',3));// start to find nafise before index 3. it search backword.if not found element return -1.
+
+//part-2.3:Array.prototype.includes()
+//Determines whether the array contains a value, returning true or false as appropriate.
+
+    //console.log(myFriend.includes('nafise'));// if value found in array then return true.otherwise return false. It also travers forward.
+
+//part-2.4:Array.prototype.find()
+//Return the found element in the array, if some element in the array satisfies the testing function,
+//or undefined if not found.
+//Only problem is it returns only one element.
+
+    const price = [20,25,30,35,40,45];
+    //type-1:
+    // const findElmn = price.find((currVal) => {
+    //     return currVal<35;// return only 1st value which fulfill this condition.
+    // })
+    //console.log(findElmn);
+    //type-2:
+    //console.log(price.find((currentvalue) => currentvalue<35));
+
+//part-2.5:Array.prototype.findIndex()
+//Return the found index in the array, if an element in the array satisfies the testing function, or -1 if not found.
+    //console.log(price.findIndex((currentvalue) => currentvalue<35));
+
+
+//part-2.6:Array.prototype.filter()
+
+//Return a new array containing all elements of the calling array for which the provided filtering function returns true.
+    const newPriceList = price.filter((elem) => {
+        return elem<35;// if condition true then return a set of array or return empty array.
+    })
+    //console.log(newPriceList);
+
+//part-3: How to Sort an Array
+//part-3.1: Array.prototype.sort()
+
+//The sort() method sorts the elements of an array in place and return the sorted array.
+//The default sort order is ascending, built upon converting the elements into strings,
+// then comparing their  sequences of UTF-16 code units values.
+
+    const month = ['jan','march','feb','dec'];
+    //console.log(month.sort()); //print [ 'dec', 'feb', 'jan', 'march' ] because it compare 1st charecter asci value.
+
+//Because of this, the sort() method will produce an incorrect result when sorting numbers.
+    const day = [1,2,30,200,34]
+    //console.log(day.sort());// print [ 1, 2, 200, 30, 34 ]
