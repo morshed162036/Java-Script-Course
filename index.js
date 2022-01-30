@@ -565,3 +565,76 @@ var myFriend = ['auti','nafise','fahim','shrabon'];
 //Because of this, the sort() method will produce an incorrect result when sorting numbers.
     const day = [1,2,30,200,34]
     //console.log(day.sort());// print [ 1, 2, 200, 30, 34 ]
+
+
+//part-4: How to CRUD an Array
+    const animal = ['pigs', 'goats', 'sheep'];
+//Array.prototype.push()
+//The push() method adds one or more elements to the end of an array and returns the new length of the array.
+
+    
+    //type-1:
+    //animal.push('cow');// add element in last of the array.
+    //console.log(animal);
+    //type-2:
+    //const count = animal.push('cow');//return length of the array.
+    //console.log(count);
+    //type-3:
+    //animal.push('cow','cat','dog');// ADD multipul value in array.
+    //console.log(animal);
+
+//Array.prototype.unshift()
+//unshift() method adds one or more elements to the beginning of an array and returns the new length of the array.
+
+    //type-1:
+    //animal.unshift('cow');// add element in first of the array.
+    //console.log(animal);
+    //type-2:
+    //const count = animal.unshift('cow');//return length of the array.
+    //console.log(count);
+    //type-3:
+    //animal.unshift('cow','cat','dog');// ADD multipul value in array.
+    //console.log(animal);
+
+//Array.prototype.pop()
+//The pop() method removes the element from an array and returns that element. This method changes the length of the array.
+
+    //type-1:
+    // console.log(animal);
+    // console.log(animal.pop());//consol remove element value
+    // animal.pop();// remove element from last of the array.
+    // console.log(animal);
+
+//Array.prototype.shift()
+// The shift() method removes the first element from an array and returns that removed element. This method changes the length of the array.
+
+    //type-1:
+    // console.log(animal);
+    // console.log(animal.shift());//print removed element values.
+    // animal.shift();// remove element from 1st of the array.
+    // console.log(animal);
+
+//Array.prototype.splice()
+//Adds and/or removes elements from an array.
+
+//1: Add Dec at the end of an array.
+//2: What is the return value of splice method?
+//3: Update march to March(update).
+//4: Delete June from an array.
+
+    const months = ['Jan', 'march', 'April', 'June', 'July'];
+
+//Ans-1:
+     //const newmonth = months.splice(months.length,0,'Dec'); // 1st index number where add or delete. 2nd is for delete count. 0 for add 1 or others for delete. 3rd value for add.
+     //console.log(months);
+//Ans-2:
+     //months.splice(months.length,0,'Dec');
+     //console.log(newmonth);// [deleted array list return kore]
+//Ans-3:
+    //type-1:  
+    //const updatemonths = months.splice(1,1,'March');// put update element index number, delete previous element, write new element value.
+    //console.log(months);
+    //type-2:  
+    console.log(months);
+    const updatemonths = months.splice(months.indexOf('march'),1,'March');// put update element index number, delete previous element, write new element value.
+    console.log(months);
