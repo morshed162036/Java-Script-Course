@@ -635,6 +635,236 @@ var myFriend = ['auti','nafise','fahim','shrabon'];
     //const updatemonths = months.splice(1,1,'March');// put update element index number, delete previous element, write new element value.
     //console.log(months);
     //type-2:  
-    console.log(months);
-    const updatemonths = months.splice(months.indexOf('march'),1,'March');// put update element index number, delete previous element, write new element value.
-    console.log(months);
+    // console.log(months);
+    // const updatemonths = months.splice(months.indexOf('march'),1,'March');// put update element index number, delete previous element, write new element value.
+    // console.log(months);
+    //type-3:
+    // const indexOfMonth = months.indexOf('march');// if data found then return index number else return -1.
+    // if(indexOfMonth != -1){
+    //     const updatemonths = months.splice(indexOfMonth,1,'March');
+    //     console.log(months);
+    // }else{
+    //     console.log('No Data found');
+    // }
+//Ans-4:
+    // const indexOfMonth = months.indexOf('June');// if data found then return index number else return -1.
+    // if(indexOfMonth != -1){
+    //     const updatemonths = months.splice(indexOfMonth,1);// 1 er infinity lekle joto data thakbe shob delete kore dibe.
+    //     console.log(months);
+    //     console.log(updatemonths);
+    // }else{
+    //     console.log('No Data found');
+    // }
+
+//part-4: Map and Reduce and filter Method
+
+//let newArray = arr.map(callback(currenValue[, index[, array]]))
+//          //return element for newArray, after executing something
+//        }[, thisArg]);
+//returns a new array containing the results of calling a function on every element in this array.
+
+//Array.prototype.map()
+    const mapArray = [1,4,9,16,25];
+    //type-1:
+    // num > 9
+    // let newArr = mapArray.map((currElem,index,arr) => {
+    //     return currElem > 9;
+    // })
+    // console.log(mapArray); 
+    // console.log(newArr); //[return true false value]
+    //type-2:
+    // let newArr = mapArray.map((currElem,index,arr) => {
+    //     return `Index no = ${index} and the value is ${currElem} belong to ${arr}`
+    // })
+    // console.log(newArr);
+    
+    //compare between Map() and forEach()
+
+    // let newArr = mapArray.map((currElem,index,arr) => {
+    //     return `Index no = ${index} and the value is ${currElem} belong to ${arr}`
+    // })
+    // console.log(newArr);// Return New Array set.
+
+    // let newArrfor = mapArray.forEach((currElem,index,arr) => {
+    //     return `Index no = ${index} and the value is ${currElem} belong to ${arr}`
+    // })
+    // console.log(newArrfor);// Return Undefined.
+
+// Challenge time.
+//1) Find the square root of each element in an array?
+//2) Multiply each element by 2 and return only those elements which are greater than 10?
+
+    let arr = [25, 36, 49, 64, 81];
+//ANS-1:
+
+    // let arrSqrt = arr.map((currElem) => {
+    //     return Math.sqrt(currElem); // return charaw 1 line e kora jaito.
+    // })
+    //  console.log(arrSqrt);
+
+//ANS-2:
+    //type-1:
+    // let arr2 = arr.map((currElem) => {
+    //     return currElem * 2;
+    // }).filter((currElem) => {
+    //     return currElem >80;
+    // })
+    // console.log(arr2);
+
+    //type-2:
+    // let arr2 = arr.map((currElem) => currElem * 2).filter((currElem) => currElem >80);
+    // console.log(arr2);
+
+//Array.prototype.reduce()
+
+//flatten an array means to convert the 3d or 2d array into a single dimension array.
+//The reduce() method executes a reduce function (that you provide) on each element of the array, resulting in a single output.
+//The reducer function take 4 arguments:
+//1) Accumulator.
+//2) Current value.
+//3) Current Index.
+//4) Source Array.
+    // type-1:
+    // let arrReduce = arr.reduce((accumulator,currentvalue) => {
+    //     return accumulator += currentvalue ;
+    // })
+    // console.log(arrReduce);// return sum of the array.
+
+    //type-2:
+    //let arr2 = arr.map((currElem) => currElem * 2).filter((currElem) => currElem >80).reduce((acc,currElem) => acc +=currElem);
+    // let arr2 = arr.map((currElem) => currElem * 2).filter((currElem) => currElem >80).reduce((acc,currElem) => acc +=currElem,1 );
+    // console.log(arr2);
+
+    //type-3: initial value set.
+    //4 sub = 1 sub mark = 100
+    //3 sub = [25, 36, 49]
+    // let arrReduce = arr.reduce((accumulator,currentvalue) => {
+    //     return accumulator += currentvalue ;
+    // },100) //100 is set as a initial value. which is auto save in accumulator before execution.
+    // console.log(arrReduce);// return sum of the array.
+
+    //type-3.1: How to fatten an array. converting 2d, 3d array into one dimensional array.
+
+    // const arr2d = [
+    //     ['stusent_1', 'student_2'],
+    //     ['stusent_3', 'student_4'],
+    //     ['stusent_5', 'student_6']
+    // ];
+    // let Arr2d = arr2d.reduce((acc,curr) => {
+    //     return acc.concat(curr);
+    // })
+    // console.log(Arr2d);// print ['stusent_1','student_2','stusent_3','student_4','stusent_5','student_6']
+    
+    //type-3.2:
+    // const arr2d = [
+    //         ['stusent_1', 'student_2'],
+    //         ['stusent_3', 'student_4'],
+    //         ['stusent_5', 'student_6'],
+    //         ['stusent_7', ['stusent_8', 'student_9']]
+    //     ];
+    // let Arr2d = arr2d.reduce((acc,curr) => {
+    //         return acc.concat(curr);
+    // }) //can't return inner array into a fatten array.
+    // console.log(Arr2d);// print ['stusent_1','student_2','stusent_3','student_4','stusent_5','student_6','stusent_7', ['stusent_8', 'student_9']]
+    
+
+
+
+
+/******************* */
+//String In JavaScript
+/******************* */
+
+// A javascript string is zero or more characters written inside quoters.
+//javascript strings are used for storing anf manipulating text.
+//You can use single or double quotes.
+//String can be created as primitives, from string literals, or as objects, using the String() constructor.
+
+    let myFirstName = 'Morshed';
+    let myLastName = "Ahmed";
+    let fullName = "morshed ahmed";
+    //let fullName = new String("morshed ahmed");// constructor// use kora uchit na eita.
+    // console.log(myFirstName);
+    // console.log(fullName);
+
+//part-1: How to find the length of a String.
+
+    //console.log(fullName.length);
+
+//part-2: Escape Character
+
+    //type-1:
+    // let anySentence = "My name is \"Morshed\" ";
+    // console.log(anySentence);
+
+    //type-2:
+    // let anySentence = 'My name is "Morshed"';
+    // console.log(anySentence);
+
+//part-3: Find a String in a String.
+
+
+// case sensitive.
+//String.prototype.indexOf(searchValue [, fromIndex])
+
+//the indexOf() method returns the index of (the position of) the first occurrence of a specified text in a string. it search forword.
+
+    // const myBio = "I am Morshed Ahmed";
+    // console.log(myBio.indexOf('a') );// return index number if not found then return -1
+    // console.log(myBio.indexOf('a',5) ); //search from index number 5. forword search.
+
+//String.prototype.lastIndexOf(searchValue [, fromIndex])
+
+//the lastIndexOf() method returns the index of (the position of) the first occurrence of a specified text in a string. it search backword.
+
+    // const myBio = "I am Morshed Ahmed";
+    // console.log(myBio.lastIndexOf('m') );// return index number if not found then return -1
+    // console.log(myBio.lastIndexOf('m',5) ); //search from index number 5. forword search.
+
+
+//part-4: Search for a String in a String.
+
+
+//String.prototype.search(regexp)
+//The search() method searches a string for a specified value and returns the position of the match.
+// this method can't take a second start position argument.
+    // const myBio = "I am Morshed Ahmed";
+    // console.log(myBio.search("am"));
+
+
+//part-5: Extracting String Parts.
+
+// remember: Javascript counts position from zero. 1st position is 0.
+//there are 3 methods for extracting a part of a string:
+//1) slice(start, end)
+//2) substring(start, end)
+//3) substr(start, length)
+
+    //part-1: The slice() method.
+    //slice() extracts a part of a string and returns the extracted part in a new string.
+    // this method takes 2 parameters: start and end position(end not included).
+    // The slice() method selects the elements starting at the given stat argument, and ends at, but does not include the given end argument.
+
+    const myBio = "I am Morshed Ahmed";
+    
+    //type-1:
+    // let slice = myBio.slice(2);
+    // console.log(slice);//print : am Morshed Ahmed
+
+    //type-2:
+    // let slice = myBio.slice(0,3);
+    // console.log(slice);//print : I a
+
+    //type-3:
+    // let slice = myBio.slice(2,-2);// start from index 2 and -2 means (length-2).
+    // console.log(slice);//print : am Morshed Ahm
+
+//Challenge Time: 
+//Display only 280 characters of a string like the one used in Twitter?
+
+    let myTwitter = "Lorem Ipsum is simply dummy text of the printing Lorem Ipsum is simply dummy text of the printing Lorem Ipsum is simply dummy text of the printing Lorem Ipsum is simply dummy text of the printing Lorem Ipsum is simply dummy text of the printing Lorem Ipsum is simply dummy text of the printing Lorem Ipsum is simply dummy text of the printing Lorem Ipsum is simply dummy text of the printing Lorem Ipsum is simply dummy text of the printing Lorem Ipsum is simply dummy text of the printing ";
+
+    let myActualTweet = myTwitter.slice(0,280);
+    console.log(myTwitter.length);
+    console.log(myActualTweet);
+    console.log(myActualTweet.length);
