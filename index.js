@@ -840,7 +840,7 @@ var myFriend = ['auti','nafise','fahim','shrabon'];
 //2) substring(start, end)
 //3) substr(start, length)
 
-    //part-1: The slice() method.
+    //part-5.1: The slice() method.
     //slice() extracts a part of a string and returns the extracted part in a new string.
     // this method takes 2 parameters: start and end position(end not included).
     // The slice() method selects the elements starting at the given stat argument, and ends at, but does not include the given end argument.
@@ -864,7 +864,202 @@ var myFriend = ['auti','nafise','fahim','shrabon'];
 
     let myTwitter = "Lorem Ipsum is simply dummy text of the printing Lorem Ipsum is simply dummy text of the printing Lorem Ipsum is simply dummy text of the printing Lorem Ipsum is simply dummy text of the printing Lorem Ipsum is simply dummy text of the printing Lorem Ipsum is simply dummy text of the printing Lorem Ipsum is simply dummy text of the printing Lorem Ipsum is simply dummy text of the printing Lorem Ipsum is simply dummy text of the printing Lorem Ipsum is simply dummy text of the printing ";
 
-    let myActualTweet = myTwitter.slice(0,280);
-    console.log(myTwitter.length);
-    console.log(myActualTweet);
-    console.log(myActualTweet.length);
+    // let myActualTweet = myTwitter.slice(0,280);
+    // console.log(myTwitter.length);
+    // console.log(myActualTweet);
+    // console.log(myActualTweet.length);
+
+
+    //part-5.2: The substring() method.
+    //substring() is similar to slice().
+    //The difference is that substring() cannot accept negative indexes.
+    //If we give negative value then the characters are counted from the 0th pos.
+
+    var str = "Apple, Bananaa, Kiwi";
+    //let myActualTweet = str.substring(2,8);// return : ple, B
+    // let myActualTweet = str.substring(2,-2);// return: Ap //if gives (-) value then it start from 0th index. And end where it need to start index value given.
+    // console.log(myActualTweet);
+
+    //part-5.3: The substr() method.
+    //substr() is similar to slice().
+    //the difference is that the second parameters specifies the length of the extracted part.
+    
+    //type-1:
+    //let myActualTweet = str.substr(2,8);// return : ple, Ban //same as slice and substring.
+    //type-2:
+    //let myActualTweet = str.substr(2,-8);//nothing return after negative value given.
+    //type-3:
+    //let myActualTweet = str.substr(-4);//return: Kiwi
+    //console.log(myActualTweet);
+
+
+//part-6: replace String Parts.
+    //The replace() method replaces a specified value with another value in a string.
+
+    // Points to remember
+    //1) The replace() method does not change the string it os called on. It returns a new string.
+    //2) By default, the replace() method replaces only the first match.
+    //3) By default, the replace() method is case sensitive.
+    //Writing IPSUM (with upper-case) will not work.
+
+    // let myActualTweet = myTwitter.replace('Ipsum','ipsum');
+    // console.log(myActualTweet);
+
+//part-7: Extracting String Characters.
+
+    //There are 3 methods for extracting string characters:
+    
+    //1) charAt(position)
+    //2) charCodeAt(position)
+    //3) Property access [ ]
+
+
+    //1) The charAt() method
+    // The charAt() method returns the character at a specified index (position) in a string.
+
+    //var str = 'Hello World'
+    //console.log(str.charAt(8)); // print: r 
+
+    //2) The charCodeAt() method
+    // The charCodeAt() method returns the unicode of the character at a specified index in a string.
+    //The method returns a UTF-16 code
+    // ( an integer between 0 to 65535 )
+
+    // The Unicode standard provides a unique number for every character, no matter the platform, device, application, or language.
+    // UTF-8 is a propular unicode encoding which has 88-bit code units.
+
+    //console.log(str.charCodeAt(8));// print: 114
+
+// Challenge time 🏳️
+
+//Return the Unicode of the last character in a string
+
+    //  var str = 'Hello World'
+    //  console.log( str.charCodeAt(str.length-1 ));
+
+
+    //3) The Property Access method
+    // ECMAScript 5 (2009) allows property access [ ] on strings
+
+    //  var str = 'Hello World'
+    //  console.log( str[2]);   
+    
+// Other Useful Method.
+
+    var myname = 'Morshed Ahmed'
+    //part-1: toUpperCase() and toLowerCase()
+
+    // console.log(myname.toUpperCase());// print :MORSHED AHMED
+
+    // console.log(myname.toLowerCase());// print :morshed ahmed
+
+    //part-2: concat() method
+    // concat() joins two or more strings.
+
+    let fName = 'Morshed'
+    let lName = 'Ahmed'
+    
+    // console.log(fName.concat(lName)); //print: MorshedAhmed
+
+    // console.log(fName.concat(' ',lName)); //print: Morshed Ahmed
+
+    // console.log(fName + lName); // print:MorshedAhmed
+
+    // console.log(`${fName} ${lName}`); // print:Morshed Ahmed
+
+
+    //part-3: trim() method
+    // The trim() method removes whitespace from both Sides of a string
+
+    // var string = "         Hello World         "
+    // console.log(string.trim());// remove all space from start and end.
+
+    //part-4: Converting a string to an array
+    // Astring can be converted to an array with the split() method.
+
+    var txt = "a,b,c,d,e";
+    var txt1 = "a, b,c ,d,e";
+    var txt2 = "a|b|c|d|e"
+
+    //type-1:
+    // console.log(txt.split(",")); // print: [ 'a', 'b', 'c', 'd', 'e' ]
+    // console.log(txt.split(" ")); // print: [ 'a,b,c,d,e' ]
+    // console.log(txt.split("|")); // print: [ 'a,b,c,d,e' ]
+
+    //type-2:
+    // console.log(txt1.split(",")); // print: [ 'a', ' b', 'c ', 'd', 'e' ]
+    // console.log(txt1.split(" ")); // print: [ 'a,', 'b,c', ',d,e' ]
+    // console.log(txt1.split("|")); // print: [ 'a, b,c ,d,e' ]
+
+    //type-3:
+    // console.log(txt2.split(",")); // print: [ 'a|b|c|d|e' ]
+    // console.log(txt2.split(" ")); // print: [ 'a|b|c|d|e' ]
+    // console.log(txt2.split("|")); // print: [ 'a', 'b', 'c', 'd', 'e' ]
+
+
+
+// Math object in JAVASCRIPT
+    // The JavaScript Math object allows you to perform mathmatical task on numbers.
+    //console.log(Math.PI); 
+    //Math.round()
+    // Returns the value of x rounded to its nearest integer.
+    // var num = 10.2565;
+    // console.log(Math.round(num));
+
+    //Math.ceil()
+    //Math.ceil(x) returns the value of x rounded up to its nearest integer.
+    // console.log(Math.ceil(4.51));//5
+    // console.log(Math.round(4.51));//5
+    // console.log(Math.ceil(9.01));//10
+    // console.log(Math.round(9.01));//9
+
+    //Math.floor()
+    //Math.floor(x) returns the value of x rounded down to its nearest integer.
+    // console.log(Math.floor(4.51));//5
+    // console.log(Math.round(4.51));//5
+    // console.log(Math.floor(9.01));//10
+    // console.log(Math.round(9.01));//9
+
+    //Math.trunc()
+    // The trunc() method returns the integer part of a number.
+    //  console.log(Math.trunc(4.51));//4
+    //  console.log(Math.trunc(9.01));//9
+    //  console.log(Math.trunc(-9.01));//-9
+    //Math.pow()
+    //Math.pow(x, y) returns the value of x to the power of y.
+
+    // console.log(Math.pow(3,2));// 9
+    // console.log(3**2);// 9
+
+    //Math.sqrt()
+    //Math.sqrt(x) returns the square root of x
+
+    // console.log(Math.sqrt(25));// 5
+    // console.log(Math.sqrt(66));// 8.12403840463596
+
+    //Math.abs()
+    //Math.abs(x) returns the absolute (positive) value of x
+
+    // console.log(Math.abs(-55));// 55
+    // console.log(Math.abs(-55.5));// 55.5
+    // console.log(Math.abs(-955)); // 955
+    // console.log(Math.abs(900-955));// 55
+
+    //Math.min()
+    //Math.min() can be used to find the lowest value in a list of argument.
+    //console.log(Math.min(0, 150, 30, 20, -8, -200));
+
+    //Math.max()
+    //Math.max() can be used to find the highest value in a list of argument.
+    //console.log(Math.max(0, 150, 30, 20, -8, -200));
+
+    //Math.random()
+    //Math.random() returns a random number between 0 (inclusive), 1 (exclusive)
+
+    // console.log(Math.random()); // return value between 0 to 1.
+    // console.log(Math.random()*10); // return value 0 to 9
+    // console.log(Math.trunc(Math.random()*10)); //return only the decimal number.
+
+//Practice Time
+// If the argument is a positive number, Math.trunc() is equivalent to Math.floor(),
+// Otherwise Math.trunc() is equivalent to math.ceil().
