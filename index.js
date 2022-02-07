@@ -999,6 +999,7 @@ var myFriend = ['auti','nafise','fahim','shrabon'];
 
 
 // Math object in JAVASCRIPT
+
     // The JavaScript Math object allows you to perform mathmatical task on numbers.
     //console.log(Math.PI); 
     //Math.round()
@@ -1063,3 +1064,86 @@ var myFriend = ['auti','nafise','fahim','shrabon'];
 //Practice Time
 // If the argument is a positive number, Math.trunc() is equivalent to Math.floor(),
 // Otherwise Math.trunc() is equivalent to math.ceil().
+
+
+//Date & Time Methods in JavaScript
+
+// Date Methods( get and set)
+// Time Methods( get and set)
+
+// JavaScript Date objects represent a single moment in time in a platform-independent format.
+// Date objects contain a number that represents milliseconds since 1 January 1970 UTC.
+
+    //Creating date objects
+    //There are 4 ways to create a new date object:
+
+   // new Date()
+   // Date Objects are created with the new Date() constructor.
+   // type-1:
+   // let currDate = new Date();
+    //console.log(currDate);//return: Mon Feb 07 2022 12:01:55 GMT+0600 (Bangladesh Standard Time) in browser.
+                        //return: 2022-02-07T06:00:29.021Z in console.
+   // type-2:
+   //console.log(new Date().toLocaleString());// return: 2/7/2022, 12:06:41 PM.
+   // type-3:
+   //console.log(new Date().toString());// return: Mon Feb 07 2022 12:07:44 GMT+0600 (Bangladesh Standard Time).
+   // type-4:
+   // Returns the numeric value corresponding to the current time-the number of millisesonds elapsed since January 1, 1970 00:00:00 UTC.
+   //console.log(Date.now()); //Return millisecond: 1644215767298 since 1970.
+
+   // new Date(year, month, day, hours, minutes, seconds, milliseconds)// it takes 7 Arguments.
+   //JavaScript count month from 0 to 11.
+   // new Date(milliseconds)// need 2 argument and month section is fixed.
+   // type-1:
+   // var d = new Date(2022, 2, 7, 12, 40, 10, 0, 0)
+   //console.log(d.toLocaleString()); //Return: 3/7/2022, 12:40:10 PM
+   // type-2:
+   // var d =  new Date(0);// Return:1/1/1970, 6:00:00 AM 
+//    var d =  new Date(Date.now());// Return:2/7/2022, 1:14:04 PM
+//    console.log(d.toLocaleString());
+   // new Date(date string)
+   // New Date (date string) creates anew date object from a date string
+//    var d = new Date('February 7, 2022 12:50:00');
+//    console.log(d);// Return: 2022-02-07T06:50:00.000Z
+//    console.log(d.toString());// Return: Mon Feb 07 2022 12:50:00 GMT+0600 (Bangladesh Standard Time)
+//    console.log(d.toLocaleString());// Return: 2/7/2022, 12:50:00 PM
+
+    // Dates Method
+    const currDate = new Date();
+
+    // //How to get the indivisual date
+    // console.log(currDate.toLocaleString());// return: 2/7/2022, 1:21:09 PM
+    // console.log(currDate.getFullYear());// return: 2022
+    // console.log(currDate.getMonth());// return: 1 // feb// 0-11
+    // console.log(currDate.getDay());// return: 1 // mon day
+    // console.log(currDate.getDate());// return: 7 
+
+    // //How to set the indivisual date
+    // console.log(currDate.toLocaleString());// return: 2/7/2022, 1:27:56 PM
+    // console.log(currDate.setFullYear(2022));// return: 1644218876972
+    // console.log(currDate.setMonth(1));// return: 1644218876972
+    // console.log(currDate.setDate(7));// return: 1644218876972 
+
+
+    // Times Method
+    const curTime = new Date();
+
+    // How to get the indivisual Time
+
+    // console.log(curTime.getTime());// return: 1644220240563 // the number of millisecond.
+    // console.log(curTime.getHours());// return: 13 //0 to23
+    // console.log(curTime.getMinutes());// return: 50
+    // console.log(curTime.getSeconds());// return: 40
+    // console.log(curTime.getMilliseconds());// return: 563
+
+    // How to set the indivisual Time
+
+    // console.log(curTime.setHours(5));// return: 1644189552182
+    // console.log(curTime.setMinutes(5));// return: 1644189552182
+    // console.log(curTime.setSeconds(5));// return: 1644189552182
+    // console.log(curTime.setMilliseconds(5));// return: 1644188705005
+
+    // Practice Method
+    // new Date.toLocalTimeString(); // 11:18:48 AM
+    // new Date.toLocalDateString(); // 11/12/2022
+    // new Date.toLocalString();     // 11/12/2022, 11:18:48 AM
