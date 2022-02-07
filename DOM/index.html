@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p> Click the button to display a date after changing the Hours.</p>
+    <button onclick="myFunction()">Try it</button>
+    <p id="demo"></p>
+
+    <script>
+        // function myFunction() {
+        //     var d = new Date();
+        //     d.setHours(6);
+        //     document.getElementById('demo').innerHTML = d;
+        // }
+        (function(){
+            setInterval(() =>{
+                //console.log(new Date().toLocaleString());
+                var d = new Date().toLocaleString();
+                document.getElementById('demo').innerHTML = d;
+            },1000)
+        })();
+    </script>
+</body>
+</html>
