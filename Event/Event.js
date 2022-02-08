@@ -23,3 +23,42 @@
 // 4: using Event Listeners (addEventListener and IE's attachEvent)
 
 //check the Events HTML file
+
+//section 2️⃣ What is Event Object?
+
+// Event object is the parent object of the event object.
+// for Example
+// MouseEvent, focusEvent, KeyboardEvent etc
+
+// section 3️⃣ MouseEvent in JavaScript
+// The MouseEvent Object
+// Events that occur when the mouse interacts with the HTML document belongs to the MouseEvent Object.
+
+
+// section 4️⃣ KeyboardEvent in JavaScript
+// Events that occur when user presses a key on the keyboard,
+// belongs to the KeyboardEvent Object.
+//https://www.w3schools.com/jsref/obj_keyboardevent.asp
+
+
+// section 5️⃣ InputEvent in JavaScript
+// The onchange event occurs when the value of an element has been changed.
+
+// For radiobuttons and checkboxes, the onchange event occurs when the checked state has been changed.
+
+
+// ➡️ Timing Based Events in JavaScript.
+
+// These time intervals are called timing events.
+// The two key methods to use with JavaScript are:
+
+// setTimeout(function, milliseconds)
+// Executes a function, after waiting a specified number of milliseconds.
+
+// setInterval(function, milliseconds)
+// Same as setTimeout(), but repeats the execution of the function continuously.
+
+// 1: setTimeout()
+// 2: setInterval()
+// 3: clearTimeout()
+// 4: clearInterval()
