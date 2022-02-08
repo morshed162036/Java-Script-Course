@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- setTimeout() -->
+    <!-- <div class="main-div">
+        <p>Want to know my name ?</p>
+        <p id="showMyName"></p>
+        <br>
+        <button id="btn">Click here</button>
+    </div>
+
+    
+    <script>
+        const myName = document.getElementById("showMyName");
+        const btn = document.getElementById("btn");
+
+        const showMyName = () => {
+            myName.innerHTML = "Loading...";// if user wait for long time
+            setTimeout(()=>{
+                myName.innerHTML = "Morshed";
+            },1000)
+        };
+        btn.addEventListener('click',showMyName);
+    </script> -->
+
+    <!-- setTimeout() &clearTimeout() -->
+    <!-- <div class="main-div">
+        <div>
+            <p>Click 'Try it'. Wait 3 seconds. The page will alert "Hello".</p>
+            <p> Click "Stop" to prevent the first function to execute.</p>
+            <p>(You must click "Stop" before the 2 seconds are up.)</p>
+            <br>
+            <button onclick="myVar = setTimeout(myFunction, 2000)">Try it</button>
+
+            <button onclick="clearTimeout(myVar)">Stop it</button>
+        </div>
+        
+    </div>
+    <script>
+        function myFunction(){
+            alert("hello");
+        }
+    </script> -->
+
+    <!-- setInterval() & clearInterval() -->
+
+    <div class="main-div">
+        <p>can you stop me when i reach at 5 ?</p>
+        <!-- <p id="showMyName"></p> -->
+        <br>
+        <button id="btn">Start</button>
+        <button id="btn1">Stop</button>
+    </div>
+    <script>
+        const stopNumber = document.querySelector("p");
+        const start = document.getElementById("btn");
+        const stopInterval = document.getElementById("btn1");
+        let num = 0;
+        let timeRef;
+        const showMyNum = () => {
+            stopNumber.innerHTML = "Loading...";// if user wait for long time
+            timeRef = setInterval(()=>{
+                stopNumber.innerHTML = `${num}`;
+                num++;
+            },1000)
+        };
+        start.addEventListener('click',showMyNum);
+        stopInterval.addEventListener('click',()=>{
+            clearInterval(timeRef);
+        });
+
+    </script>
+
+</body>
+</html>
