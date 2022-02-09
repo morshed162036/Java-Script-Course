@@ -147,11 +147,11 @@
 //  console.log( b);
 
 // //part-11: challange-5: swap two variable value with out temp variable
-// var a = 5;
-// var b = 10;
-//  a = a+b;
-//  b = a-b;
-//  a = a-b;
+ //var a = 5;
+ //var b = 10;
+ // a = a+b;
+ // b = a-b;
+ // a = a-b;
 // console.log( a);
 // console.log( b);
 //part-12: Interview Question-3 : diff between == vs === ?
