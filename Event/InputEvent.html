@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main-div">
+        <div>
+            <label for=""> Your Name 👉</label>
+            <input type="text" name="" id="ice">
+            <br>
+            <label for="">Choose an ice cream flavor 💟
+                <select id="iceCreams" name="iceCreams" >
+                <!-- <select id="iceCreams" name="iceCreams" onchange="selectElement()"> -->
+                    <option value="">Select One..</option>
+                    <option value="chocolate">Chocolate</option>
+                    <option value="sardine">Sardine</option>
+                    <option value="vanilla">Vanilla</option>
+                </select>
+            </label>
+            <br>
+            <div id="result"></div>
+        </div>
+    </div>
+    <script>
+        // Type-1:
+        // const selectElement = () =>{
+        //     const changeInput = document.getElementById("ice").value;
+        //     const changeFlavor = document.getElementById("iceCreams").value;
+        //     const result = document.getElementById("result");
+        //     result.innerHTML = `Mr ${changeInput} Want ${changeFlavor} Flavor`;
+        //     //console.log(`${changeInput} and ${changeFlavor}`);
+        // };
+        // Type-2:
+        const selectElement = document.getElementById("iceCreams");
+        selectElement.addEventListener("change",()=>{
+            const changeInput = document.getElementById("ice").value;
+            const changeFlavor = document.getElementById("iceCreams").value;
+            const result = document.getElementById("result");
+            result.innerHTML = `Mr ${changeInput} Want ${changeFlavor} Flavor`;
+        });
+
+    </script>
+</body>
+</html>

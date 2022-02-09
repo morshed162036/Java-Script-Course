@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            color: rgb(127, 251, 255);
+            background-color: cornflowerblue;
+        }
+        p{
+            text-align: center;
+            color: rgba(255, 255, 255, 0.8);
+        }
+        h1,form{
+            color: aquamarine;
+            text-align: center;
+        }
+        button{
+            cursor: pointer;
+            text-align: center;
+            color: whitesmoke;
+            background-color: yellowgreen;
+            position: center;
+        }
+    </style>
+</head>
+<body>
+    <p class="a">Plz continue</p>
+    <p class="a">Plz write the code</p>
+    <p>Don't leave this course</p>
+    <h1 id="heading"> Change the content of h1</h1>
+    <button onclick="changeContent()"> Press </button>
+
+    <form action="">
+        <label for="">Male</label>
+        <input type="radio" name="gender" id="">
+        <label for="">Female</label>
+        <input type="radio" name="gender" id="">
+        <label for="">MaleFemale</label>
+        <input type="radio" name="gender" id="">
+    </form>
+
+    <script>
+        const changeContent = () =>{
+            //we can directly write
+            //document.getElementById('heading').innerHTML = "welcome to my page";
+           
+            // by taking the Reference, heading is the object here.
+            // const headingChange = document.getElementById('heading');
+            // headingChange.innerHTML = "welcome to my page";
+
+            // console.log(document.getElementsByClassName('a'));
+            // console.log(document.getElementsByTagName('p'));
+            //console.log(document.getElementsByName('gender'));
+             
+        }
+    </script>
+</body>
+</html>
