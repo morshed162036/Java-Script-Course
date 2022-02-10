@@ -102,3 +102,90 @@
     //  obj.myName();
 
     
+// 3️⃣ Destructuring in ES6 ?
+
+    //The destructuring assignment syntax is a JavaScript expression that makes it possible to unpack values from arrays,
+    //or properties from objects, into distinct variables.
+
+    // => Array Destructuring 🥇
+
+    // const myBio = ['morshed', 'ahmed', 26];
+
+    // let myFname = myBio[0];
+    // let myLname = myBio[1];
+    // let myage = myBio[2];
+    
+
+    // let [myFname, myLname, myage] = myBio;
+    // console.log(myage);
+
+    // we can add values too
+
+    // let [myFname, myLname, myage, address = 'mirpur'] = myBio;
+    // console.log(address);
+
+
+
+    // => Object Destructuring 🥇
+
+    // const  myBioData = {
+    //     myFname : 'Morshed',
+    //     myLname : 'Ahmed',
+    //     age : 26
+    // }
+    // let age = myBioData.age;
+    // console.log(age);
+
+    //  let {myFname, myLname, myage} = myBioData;
+    //  console.log(myage);
+
+     // we can add values too
+
+    // let {myFname, myLname, myage, address = 'mirpur'} = myBioData;
+    // console.log(address);
+
+// 4️⃣ Object Properties in ES6 ?
+
+    // => we can now use Dynamic Properties.
+
+    // let myName = "Morshed";
+    // const myBio = {
+    //    myName : "Hi there",
+    //     [myName] : "Hi there",
+    //     26 : "is my age"
+    //     [20+6] : "is my age"
+    // }
+    // console.log(myBio); // return : { '26': 'is my age', Morshed: 'Hi there' }
+
+    // => No need to write key and value, if both ase same.
+
+    // Type-1;
+    // let myName = 'morshed ahmed';
+    // let myAge = 26;
+
+    // const myBio = {
+    //     myName : myName,
+    //     myAge : myAge
+    // }
+    // console.log(myBio);
+
+    // Type-2:
+    // let myName = 'morshed ahmed';
+    // let myAge = 26;
+
+    // const myBio = {
+    //     myName,
+    //     myAge
+    // }
+    // console.log(myBio);
+
+// 5️⃣ Spread Operator
+
+    // const colors = ['red', 'green','blue'];
+
+    // const colors = ['red', 'green','blue','white','black'];
+
+    // 2nd time add one more color on top and tell we need to write it again on myColor array too.
+
+    // const myFavColors = [ 'yellow', 'black', ...colors];
+    // console.log(myFavColors);
