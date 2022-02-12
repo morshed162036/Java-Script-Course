@@ -1109,7 +1109,7 @@ var myFriend = ['auti','nafise','fahim','shrabon'];
 //    console.log(d.toLocaleString());// Return: 2/7/2022, 12:50:00 PM
 
     // Dates Method
-    const currDate = new Date();
+    //const currDate = new Date();
 
     // //How to get the indivisual date
     // console.log(currDate.toLocaleString());// return: 2/7/2022, 1:21:09 PM
@@ -1126,7 +1126,7 @@ var myFriend = ['auti','nafise','fahim','shrabon'];
 
 
     // Times Method
-    const curTime = new Date();
+    // const curTime = new Date();
 
     // How to get the indivisual Time
 
@@ -1147,3 +1147,149 @@ var myFriend = ['auti','nafise','fahim','shrabon'];
     // new Date.toLocalTimeString(); // 11:18:48 AM
     // new Date.toLocalDateString(); // 11/12/2022
     // new Date.toLocalString();     // 11/12/2022, 11:18:48 AM
+
+
+
+
+
+
+
+
+
+    // 🌟🌟🌟 ECMAScript 2014 // ES5
+    // "use strict"; // if use this top of any code you must follow treditional way of codin..declare variable data type.
+    //  let x = 3.14;
+    //  console.log(x);
+
+    // 🌟🌟🌟 ECMAScript 2016 // ES7
+
+    // 1️⃣ Array.prototype.includes.
+
+        // const color = ['red', 'green', 'blue',];
+        // const isPresent = color.includes('green');
+        // console.log(isPresent); //return: true
+
+
+    // 2️⃣ Exponentiation Operator. (power)
+        //console.log(2**3);
+
+    // 🌟🌟🌟 ECMAScript 2017 // ES8
+
+    // 1️⃣ String padding.
+        // way-1:
+        // padStart()
+        // let name = "Morshed";
+        // console.log(name.padStart(15)); // 15 = name length + want padding size.
+        // console.log(name.padStart(15).length);
+
+        // padEnd()
+        // let name = "Morshed";
+        // console.log(name.padEnd(15)); // 15 = name length + want padding size.
+        // console.log(name.padEnd(15).length);
+
+        // way-2:
+        // padStart()
+        // let name = "morshed";
+        // let padName = name.padStart(7); // 7 = name length + want padding size.
+        // console.log(padName); // nothing hapend
+        // console.log(padName.length); // same length as before.
+
+        // padEnd()
+        // let name = "morshed";
+        // let padName = name.// padEnd(7); // 7 = name length + want padding size.
+        // console.log(padName); // nothing hapend
+        // console.log(padName.length); // same length as before.
+
+        // way-3:
+        // padStart()
+        // let name = "morshed";
+        // let padName = "Morshed".padStart(10); // 10 = name length + want padding size.
+        // console.log(padName);
+        // console.log(padName.length);
+
+        // padEnd()
+        // let name = "morshed";
+        // let padName = "Morshed".padEnd(10); // 10 = name length + want padding size.
+        // console.log(padName);
+        // console.log(padName.length);
+
+    // 2️⃣ Object.values().
+
+        // let person = { name : "Morshed", age: 30};
+        // console.log(Object.values(person)); //return : 1d array => [ 'Morshed', 30 ]
+
+    // 3️⃣ Object.entries().
+
+        // let person = { name : "Morshed", age: 30};
+        // console.log(Object.entries(person)); //return : 2d array => [ [ 'name', 'Morshed' ], [ 'age', 30 ] ]
+        
+    // 4️⃣ Object.getOwnPropertyDescriptors().
+    // 5️⃣ Tralling commas in function parameter lists and call
+    // 6️⃣ Async function.
+    // 7️⃣ Shared memory and atomics.
+
+
+
+    // 🌟🌟🌟 ECMAScript 2018 // ES9
+
+    // 1️⃣ Rest/Spread Properties.
+
+        // let person = { name : "Morshed", age: 30};
+        // const sPerson = {...person};
+        // console.log(sPerson);
+
+    // 2️⃣ Asyncronous iteration.
+    // 3️⃣ Promise.prototype.finally().
+    // 4️⃣ Regular Expression improvements.
+    //      4️⃣.1️⃣ RegExp lookbehind assertions: match a string depending in what precedes it.
+    //      4️⃣.2️⃣ Unicode property escapes \p{...} and \p{...}.
+    //      4️⃣.3️⃣ Named capturing groups.
+    //      4️⃣.4️⃣ The s flag fpr regular expressions.
+
+
+
+    // 🌟🌟🌟 ECMAScript 2019 // ES10
+
+    // 1️⃣ Array.prototype.{flat,flatMap}
+
+        // const arr2d = [
+        //         ['stusent_1', 'student_2'],
+        //         ['stusent_3', 'student_4'],
+        //         ['stusent_5', 'student_6'],
+        //         ['stusent_7', ['stusent_8', 'student_9']]
+        //     ];
+        // let Arr2d = arr2d.reduce((acc,curr) => {
+        //         return acc.concat(curr);
+        // }) //can't return inner array into a fatten array.
+        // console.log(Arr2d); // return : ['stusent_1','student_2','stusent_3','student_4', 'stusent_5','student_6', 'stusent_7', [ 'stusent_8', 'student_9' ] ]
+        //console.log(arr2d.flat(Infinity));// return: ['stusent_1', 'student_2','stusent_3', 'student_4','stusent_5', 'student_6','stusent_7', 'stusent_8','student_9']
+
+
+    // 2️⃣ Optional catch binding
+    // 3️⃣ Object.fromEntries()
+
+        // let person = { name : "Morshed", age: 30};
+        // console.log(Object.entries(person)); //return: [ [ 'name', 'Morshed' ], [ 'age', 30 ] ]
+        // let prevPerson = Object.entries(person);
+        // console.log(Object.fromEntries(prevPerson)); // return: { name: 'Morshed', age: 30 }
+
+    // 4️⃣ String.prototype.{trimStart,trimEnd} // works on delete space.
+    // 5️⃣ Symbol.prototype.description
+    // 6️⃣ JSON improvements
+    // 7️⃣ Well-formed => JSON.stringify()
+    // 8️⃣ Function.prototype.toString()
+
+
+    // 🌟🌟🌟 ECMAScript 2020 // ES11
+
+    // 1️⃣ BigInt
+
+    // let oldNum = Number.MAX_SAFE_INTEGER;
+    // console.log(oldNum);
+    // console.log(oldNum + 12);
+    // console.log(9007199254740991n + 12n);
+
+    // 2️⃣ Nullish Coalescing.
+
+    // const foo = null ?? 'default string';
+    // console.log(foo);
