@@ -13,6 +13,36 @@
 //     // jei function ke amra onno function er vitore argument hishabe pass kori tader call back function bole.
 
 
+// 4️⃣: Synchronous And Asynchronous in JavaScript.
+
+    // Synchronous JavaScript Program.
+
+    // const fun2 = () => {
+    //     console.log(`Function 2️⃣ is called`);
+    // }
+    // const fun1 = () =>{
+    //     console.log(`Function 1️⃣ is called`);
+    //     fun2();
+    //     console.log(`Function 1️⃣ is called`);
+    // }
+    // fun1();
+
+
+    // Asynchronous JavaScript Program.
+
+    // const fun2 = () => {
+    //     setTimeout(()=>{
+    //         console.log(`Function 2️⃣ is called`);
+    //     },2000);
+        
+    // }
+    // const fun1 = () =>{
+    //     console.log(`Function 1️⃣ is called`);
+    //     fun2();
+    //     console.log(`Function 1️⃣ is called`);
+    // }
+    // fun1();
+
 // 5️⃣: Hoisting in Javascript.
 
 //   // We have a creation phase and execution phase.
@@ -63,3 +93,76 @@
 
 // In JavaScript, closures are created every time a function is created, at function creation time.
 
+        // const outerFunction = (a) => {
+        //     let b = 10;
+        //     const innerFunction = () => {
+        //         let sum = a+b;
+        //         console.log(`The sum of the two num is ${sum}`);
+        //     }
+        //     innerFunction();
+        // }
+
+        // outerFunction(5);
+
+    // One more Example 👇
+
+        // const outerFunction = (a) => {
+        //     let b = 10;
+        //     const innerFunction = () => {
+        //         let sum = a+b;
+        //         console.log(`The sum of the two num is ${sum}`);
+        //     }
+        //     return innerFunction;
+        // }
+
+        // let checkClousure = outerFunction(5);
+        //checkClousure();// print: The sum of the two num is 15
+        //console.log(checkClousure);// [Function: innerFunction]
+        //console.dir(checkClousure); // web site console e dekte hobe.
+
+// 8️⃣: Function Curring (We will see after Async JS section)
+    
+    //Type-1:
+
+    // function sum (num1){
+    //     console.log(num1);
+    //     return function (num2){
+    //         console.log(num1,num2);
+    //         return function (num3){
+    //             console.log(num1,num2,num3);
+    //             console.log(num1+num2+num3);
+    //         }
+    //     }
+    // }
+    // sum(5)(3)(8);
+
+    //Type-2:
+
+    // function sum(num1){(num2)=>{
+    //     (num3)=>{
+    //             console.log(num1,num2,num3);
+    //         }
+    //     }
+    // }
+    // sum(5)(3)(8); 
+
+    //Type-3:
+
+    // const sum = (num1) => (num2) => (num3) => console.log(num1,num2,num3);
+    // sum(5)(3)(8); 
+
+
+// 9️⃣: CallBack Hell
+
+    setTimeout(() => {
+        console.log(` 1️⃣ work is done`);
+        setTimeout(() => {
+            console.log(` 2️⃣ work is done`);
+            setTimeout(() => {
+                console.log(` 3️⃣ work is done`);
+                setTimeout(() => {
+                    console.log(` 4️⃣ work is done`);
+                }, 1000);
+            }, 1000);
+        }, 1000);
+    }, 1000);
