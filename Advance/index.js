@@ -154,15 +154,32 @@
 
 // 9️⃣: CallBack Hell
 
-    setTimeout(() => {
-        console.log(` 1️⃣ work is done`);
-        setTimeout(() => {
-            console.log(` 2️⃣ work is done`);
-            setTimeout(() => {
-                console.log(` 3️⃣ work is done`);
-                setTimeout(() => {
-                    console.log(` 4️⃣ work is done`);
-                }, 1000);
-            }, 1000);
-        }, 1000);
-    }, 1000);
+    // setTimeout(() => {
+    //     console.log(` 1️⃣ work is done`);
+    //     setTimeout(() => {
+    //         console.log(` 2️⃣ work is done`);
+    //         setTimeout(() => {
+    //             console.log(` 3️⃣ work is done`);
+    //             setTimeout(() => {
+    //                 console.log(` 4️⃣ work is done`);
+    //             }, 1000);
+    //         }, 1000);
+    //     }, 1000);
+    // }, 1000);
+
+
+//  🔟: JSON
+
+//// JSON.stringify turns a JavaScript object into JSON text and Stores that JSON text in a string, eg:
+
+    var my_object = { key_1: "some text", key_2: true, key_3: 5};
+
+    var object_as_string = JSON.stringify(my_object);
+    console.log(my_object);
+    console.log(object_as_string);
+    console.log(typeof(object_as_string));
+
+//// JSON.parse turns a string of JSON text into JavaScript object_as_string, eg:
+
+    var object_as_string_as_object = JSON.parse(object_as_string);
+    console.log(object_as_string_as_object);
